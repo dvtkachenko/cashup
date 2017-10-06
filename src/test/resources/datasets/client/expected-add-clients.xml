@@ -1,0 +1,4 @@
+<dataset>
+    <CLIENT id="50" first_name="John" last_name="Snow" birthday="1986-07-11" sex="MALE" inn="002459886465" />
+    <CLIENT id="51" first_name="Helen" last_name="Gara" birthday="1992-07-11" sex="FEMALE" inn="002459898696" />
+</dataset>

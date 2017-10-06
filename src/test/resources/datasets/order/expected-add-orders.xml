@@ -1,0 +1,4 @@
+<dataset>
+    <ORDERS id="50" client_id="1" order_date="2017-09-11" order_state="NEW" amount="1500" currency="USD" confirmed="true" />
+    <ORDERS id="51" client_id="5" order_date="2017-08-11" order_state="COMPLETED" amount="3000" currency="EUR" confirmed="true" />
+</dataset>
