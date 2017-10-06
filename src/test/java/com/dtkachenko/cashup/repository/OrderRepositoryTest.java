@@ -11,6 +11,7 @@ import com.github.database.rider.core.api.dataset.ExpectedDataSet;
 import org.hamcrest.Matchers;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Commit;
 
 import java.time.LocalDate;
@@ -22,7 +23,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
-public class OrderRepositoryTest extends AbstractRepositoryTest<OrderRepository>{
+public class OrderRepositoryTest extends AbstractRepositoryTest<OrderRepository> {
 
     private static Client john;
     private static Client helen;
@@ -61,9 +62,11 @@ public class OrderRepositoryTest extends AbstractRepositoryTest<OrderRepository>
 
     @Test
     @DataSet(value = "order/stored-orders.xml", cleanBefore = true, disableConstraints = true)
-    public void ordersCanBeFoundById() {
+    public void ordersCanBeFound() {
         assertEquals(repository.findOne(1L), orderJohn);
         assertThat(repository.exists(4L), is(true));
+        assertThat(repository.findOne(2L).getClient(), is(helen));
+        assertEquals(repository.findByOrderDate(LocalDate.of(2017,9,11)).size(), 2);
     }
 
     @Test

@@ -1,4 +1,7 @@
 <dataset>
+    <CLIENT id="1" first_name="John" last_name="Snow" birthday="1986-07-11" sex="MALE" inn="002459886465" />
+    <CLIENT id="5" first_name="Helen" last_name="Gara" birthday="1992-07-11" sex="FEMALE" inn="002459898696" />
+
     <ORDERS id="1" client_id="1" order_date="2017-09-11" order_state="NEW" amount="1500" currency="USD" confirmed="true" />
     <ORDERS id="2" client_id="5" order_date="2017-08-11" order_state="COMPLETED" amount="3000" currency="EUR" confirmed="true" />
     <ORDERS id="3" client_id="1" order_date="2017-09-11" order_state="NEW" amount="1500" currency="USD" confirmed="true" />

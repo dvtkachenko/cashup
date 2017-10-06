@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@ActiveProfiles(profiles = {"test", "test-repository"})
+@ActiveProfiles(profiles = {"test"})
 public abstract class AbstractRepositoryTest<T> {
 
     @Qualifier("dataSource")

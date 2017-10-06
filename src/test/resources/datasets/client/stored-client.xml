@@ -4,4 +4,10 @@
     <CLIENT id="3" first_name="Jack" last_name="Nikolson" birthday="1986-09-01" sex="MALE" inn="002453546465" />
     <CLIENT id="4" first_name="Anton" last_name="Daev" birthday="1994-02-23" sex="MALE" inn="002457464785" />
     <CLIENT id="5" first_name="Helen" last_name="Gara" birthday="1992-07-11" sex="FEMALE" inn="002459898696" />
+
+    <ORDERS id="1" client_id="1" order_date="2017-09-11" order_state="NEW" amount="1500" currency="USD" confirmed="true" />
+    <ORDERS id="2" client_id="5" order_date="2017-08-11" order_state="COMPLETED" amount="3000" currency="EUR" confirmed="true" />
+    <ORDERS id="3" client_id="1" order_date="2017-09-11" order_state="NEW" amount="3500" currency="USD" confirmed="true" />
+    <ORDERS id="4" client_id="5" order_date="2017-06-11" order_state="COMPLETED" amount="1500" currency="USD" confirmed="true" />
+    <ORDERS id="5" client_id="5" order_date="2017-07-11" order_state="COMPLETED" amount="3400" currency="EUR" confirmed="true" />
 </dataset>

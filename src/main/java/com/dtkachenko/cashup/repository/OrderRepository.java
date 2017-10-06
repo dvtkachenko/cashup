@@ -16,4 +16,6 @@ public interface OrderRepository extends CrudRepository<Order, Long> {
     List<Order> findAll();
 
     List<Order> findByOrderDate(@Param("orderDate") @DateTimeFormat(pattern="yyyy-MM-dd") LocalDate orderDate);
+
+    Order save(Order order);
 }
