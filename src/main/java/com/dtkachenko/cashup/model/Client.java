@@ -59,6 +59,16 @@ public class Client {
         this.inn = inn;
     }
 
+    public void addOrder(Order order) {
+        orders.add(order);
+        order.setClient(this);
+    }
+
+    public void removeOrder(Order order) {
+        orders.remove(order);
+        order.setClient(null);
+    }
+
     public Long getId() {
         return id;
     }
