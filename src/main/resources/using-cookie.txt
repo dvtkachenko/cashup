@@ -1,0 +1,14 @@
+# Using LoginFormSecurityConfig
+
+# Authentication against the REST API – the URL for login is /login – and a simple curl command performing login would be:
+# This request will return the Cookie which will then be used by any subsequent request against the REST Service
+
+curl -i -X POST -d username=user -d password=password http://localhost:8080/login
+
+# We can use curl to authentication and store the cookie it receives in a file:
+
+curl -i -X POST -d username=user -d password=password -c d:/temp/cookies.txt http://localhost:8080/login
+
+# Then we can use the cookie from the file to do further authenticated requests:
+
+curl -i --header "Accept:application/json" -X GET -b d:/temp/cookies.txt http://localhost:8080/api/clients

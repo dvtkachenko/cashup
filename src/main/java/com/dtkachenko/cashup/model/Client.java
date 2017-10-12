@@ -51,6 +51,13 @@ public class Client {
     public Client() {
     }
 
+    public Client(String firstName, String lastName, Sex sex, String inn) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sex = sex;
+        this.inn = inn;
+    }
+
     public Client(String firstName, String lastName, LocalDate birthday, Sex sex, String inn) {
         this.firstName = firstName;
         this.lastName = lastName;
