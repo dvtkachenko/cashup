@@ -1,5 +1,6 @@
 package com.dtkachenko.cashup.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
@@ -47,6 +48,14 @@ public class Order {
     private boolean confirmed;
 
     public Order() {
+    }
+
+    public Order(Client client, OrderState orderState, long amount, Currency currency, boolean confirmed) {
+        this.client = client;
+        this.orderState = orderState;
+        this.amount = amount;
+        this.currency = currency;
+        this.confirmed = confirmed;
     }
 
     public Order(Client client, LocalDate orderDate, OrderState orderState, long amount, Currency currency, boolean confirmed) {
